@@ -6,7 +6,7 @@ import { Router, RoutesRecognized } from '@angular/router';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  standalone: true, // 
+  standalone: true,
   imports: [CommonModule]
 })
 export class FooterComponent implements OnInit {
