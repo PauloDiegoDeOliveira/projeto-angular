@@ -1,0 +1,43 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    min-height: calc(100vh - 115px); // 64px NAVBAR + 51px FOOTER = 115px
+    width: 100%;
+
+    @media screen and (max-width: 599px) {
+        min-height: calc(100vh - 107px); // 56px NAVBAR + 51px FOOTER = 107px
+        margin-top: 56px;
+    }
+
+    @media screen and (max-width: 430px) {
+        min-height: calc(100vh - 136px); // 56px NAVBAR + 80px FOOTER = 136px
+    }
+
+    &--nav {
+        margin-top: 64px;
+
+        @media screen and (max-width: 599px) {
+            margin-top: 56px;
+        }
+    }
+}
+
+.c-drawer {
+    &__sidenav {
+        overflow-x: hidden;
+        background-color: var(--accent-color);
+    }
+}
+
+::ng-deep {
+    .mat-drawer-inner-container {
+        overflow-x: hidden !important;
+    }
+
+    .mat-drawer-content {
+        overflow: hidden !important;
+    }
+}
