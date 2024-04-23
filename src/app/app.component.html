@@ -1,4 +1,6 @@
 <div class="root">
+  <app-navbar *ngIf="isNavbar" [Menus]="Menus" [isMenusLoading]="isMenusLoading" (toggleSidenav)="drawer.toggle()"></app-navbar>
+
   <app-sidenav></app-sidenav>
 
   <app-footer></app-footer>

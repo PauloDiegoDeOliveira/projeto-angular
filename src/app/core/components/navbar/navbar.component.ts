@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MenuButtonComponent } from "./components/menu-button/menu-button.component";
 import { MiniFabComponent } from "../../shared/mini-fab/mini-fab.component";
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +16,7 @@ import { MiniFabComponent } from "../../shared/mini-fab/mini-fab.component";
   imports: [
     MatIconModule,
     MatToolbarModule,
+    MatMenuModule,
     MenuButtonComponent,
     MiniFabComponent
   ]
