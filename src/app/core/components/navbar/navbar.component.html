@@ -1,0 +1,26 @@
+<mat-toolbar class="c-navbar" color="accent">
+    <app-mini-fab *ngIf="backBtnRoutes()" class="return" icon="" (clickButton)="return()">
+    </app-mini-fab>
+
+    <img class="c-navbar__logo" src="./assets/imgs/logo.svg" routerLink="/inicio" draggable="false">
+
+    <app-menu-button class="c-navbar__button hidetablet" *ngFor="let item of Menus" [ButtonMenu]="item">
+    </app-menu-button>
+
+    <span class="c-navbar__spacer"></span>
+
+    <button class="c-navbar__icon-user hidetablet" [matMenuTriggerFor]="menuUser" mat-mini-fab color="accent">
+        <mat-icon svgIcon="usuarios"></mat-icon>
+    </button>
+
+    <mat-menu #menuUser="matMenu">
+        <button mat-menu-item (click)="logout()">
+            <mat-icon svgIcon="sair"></mat-icon>
+            <span>Sair</span>
+        </button>
+    </mat-menu>
+
+    <button class="c-navbar__icon-user showtablet" mat-mini-fab color="accent" (click)="onSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>

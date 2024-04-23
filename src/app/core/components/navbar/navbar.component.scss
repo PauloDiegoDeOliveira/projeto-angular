@@ -1,0 +1,70 @@
+@import '../../../style/variables';
+
+.c-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    &__button {
+        margin-right: 5px;
+    }
+
+    &__spacer {
+        flex: 1 1 auto;
+    }
+
+    &__logo {
+        margin-right: 17px;
+        cursor: pointer;
+    }
+
+    &__text-user {
+        p {
+            margin: 0;
+            font-size: 12px;
+            line-height: 16px;
+
+            @media screen and (max-width: 1100px) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 90px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 68px;
+            }
+        }
+    }
+
+    &__icon-user {
+        margin-left: 10px;
+        box-shadow: none;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &__notification {
+        margin-right: 5px;
+    }
+}
+
+.mat-icon {
+    width: 20px;
+}
+
+.return {
+    position: absolute;
+    top: 76px;
+    left: 12px;
+    z-index: 999;
+    opacity: 0.3;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}

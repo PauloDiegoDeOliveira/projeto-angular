@@ -1,14 +1,20 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IMenu, ISubmenu } from '../../interfaces/IMenu';
-import { onNavigateTo } from '../../utils/methods';
 import { CommonModule } from '@angular/common';
+import { onNavigateTo } from '../../utils/methods';
+import { IMenu, ISubmenu } from '../../interfaces/IMenu';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [
+    CommonModule,
+    MatListModule,
+    MatIconModule
+  ]
 })
 export class SidenavComponent {
   @Input() Menus: IMenu[] = [];
@@ -17,8 +23,7 @@ export class SidenavComponent {
 
   private _onNavigateTo = onNavigateTo();
 
-  constructor() {
-  }
+  constructor() { }
 
   onNavigate(menuButton: IMenu, menu?: ISubmenu) {
     this.onNavigated.emit();
