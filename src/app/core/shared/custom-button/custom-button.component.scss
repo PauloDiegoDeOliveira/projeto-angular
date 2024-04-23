@@ -1,0 +1,12 @@
+.hide-mobile {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.clear-margin {
+    @media screen and (max-width: 768px) {
+        margin-right: unset !important;
+    }
+
+}
