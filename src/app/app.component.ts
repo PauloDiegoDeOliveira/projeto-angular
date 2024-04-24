@@ -7,7 +7,7 @@ import { Router, RouterModule, RoutesRecognized } from '@angular/router';
 import { MenuService } from './core/services/menu.service';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [
-    HttpClientModule, 
+    HttpClientModule,
     FooterComponent,
     CommonModule,
     SidenavComponent,
@@ -30,7 +30,8 @@ export class AppComponent {
   public Menus: IMenu[] = [];
   public isMenusLoading: boolean = true;
 
-  constructor(private router: Router,
+  constructor(    
+    private router: Router,
     private menuService: MenuService) {
     this.verifyRoute();
   }
