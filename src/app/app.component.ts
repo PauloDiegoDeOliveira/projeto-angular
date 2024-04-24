@@ -3,8 +3,11 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './core/components/sidenav/sidenav.component';
 import { IMenu, IMenuResponse } from './core/interfaces/IMenu';
-import { Router, RoutesRecognized } from '@angular/router';
+import { Router, RouterModule, RoutesRecognized } from '@angular/router';
 import { MenuService } from './core/services/menu.service';
+import { NavbarComponent } from './core/components/navbar/navbar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +15,13 @@ import { MenuService } from './core/services/menu.service';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [
+    HttpClientModule, 
     FooterComponent,
     CommonModule,
-    SidenavComponent
+    SidenavComponent,
+    NavbarComponent,
+    MatSidenavModule,
+    RouterModule,
   ]
 })
 export class AppComponent {

@@ -15,7 +15,7 @@ import { CustomButtonComponent } from '../../../../shared/custom-button/custom-b
     MatIconModule,
     CommonModule,
     MatMenuModule,
-    CustomButtonComponent
+    CustomButtonComponent,
   ]
 })
 export class MenuButtonComponent {
