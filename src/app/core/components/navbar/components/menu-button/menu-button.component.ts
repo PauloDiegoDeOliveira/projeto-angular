@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { CustomButtonComponent } from '../../../../shared/custom-button/custom-button.component';
-import { ToastrModule } from 'ngx-toastr';
+// import { ToastrModule } from 'ngx-toastr';
 
 @Component({
   selector: 'app-menu-button',
@@ -17,7 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     MatMenuModule,
     CustomButtonComponent,
-    ToastrModule
+    // ToastrModule,
   ]
 })
 export class MenuButtonComponent {
