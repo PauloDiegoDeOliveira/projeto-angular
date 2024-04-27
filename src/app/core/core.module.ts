@@ -14,6 +14,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuButtonComponent } from './components/navbar/components/menu-button/menu-button/menu-button.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -31,10 +32,10 @@ import { MenuButtonComponent } from './components/navbar/components/menu-button/
     MatTreeModule,
     HttpClientModule,
     MatListModule,
+    SharedModule,
     RouterModule,
     MatBadgeModule,
-    MatProgressSpinnerModule,
-    MenuButtonComponent
+    MatProgressSpinnerModule
   ],
   exports: [
     NavbarComponent,
