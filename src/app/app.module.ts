@@ -8,6 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 registerLocaleData(localePt)
 @NgModule({
@@ -20,6 +24,11 @@ registerLocaleData(localePt)
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    MatSidenavModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
