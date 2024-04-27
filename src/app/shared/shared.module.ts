@@ -4,6 +4,7 @@ import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
+import { MiniFabComponent } from './mini-fab/mini-fab.component';
 
 const MY_DATE_FORMAT = {
   parse: {
@@ -20,6 +21,7 @@ const MY_DATE_FORMAT = {
 @NgModule({
   declarations: [
     CustomButtonComponent,
+    MiniFabComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ const MY_DATE_FORMAT = {
   ],
   exports: [
     CustomButtonComponent,
-    MatIconModule
+    MatIconModule,
+    MiniFabComponent
   ],
 })
 export class SharedModule { }

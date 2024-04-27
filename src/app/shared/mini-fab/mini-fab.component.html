@@ -1,0 +1,10 @@
+<button class="mini-fab-btn" mat-mini-fab [color]="color" type="button" (click)="onClick()"
+    [attr.aria-label]="ariaLabel" [title]="title" [disabled]="disable || isLoading">
+
+    <mat-icon [svgIcon]="icon" *ngIf="icon && !isLoading"></mat-icon>
+
+    <mat-icon *ngIf="isLoading" [color]="color">
+        <mat-spinner diameter="20"></mat-spinner>
+    </mat-icon>
+
+</button>
