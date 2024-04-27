@@ -6,6 +6,8 @@ import localePt from '@angular/common/locales/pt';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 registerLocaleData(localePt)
 @NgModule({
@@ -17,9 +19,11 @@ registerLocaleData(localePt)
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
+    SharedModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

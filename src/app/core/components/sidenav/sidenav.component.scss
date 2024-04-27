@@ -1,0 +1,56 @@
+@import '../../../style/variables';
+
+.c-sidenav {
+    width: 250px;
+    overflow-x: hidden;
+
+    .c-content {
+        margin-bottom: 10px;
+        width: 100%;
+        color: white;
+
+        &__title {
+            background-color: var(--accent-darker-color);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px 5px;
+        }
+
+        &__icon {
+            margin: 0 7px;
+        }
+
+        &__sub {}
+
+        &__menu-container {
+            display: flex;
+            align-items: center;
+        }
+
+        &__menu {
+            background-color: var(--accent-darker-color);
+
+            &--title {
+                padding-left: 5px;
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .c-sidenav {
+        .mdc-list-item__primary-text {
+            color: white !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        mat-icon {
+            margin-right: 4px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}

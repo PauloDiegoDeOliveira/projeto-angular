@@ -1,0 +1,9 @@
+<app-custom-button class="c-navbar__button" (click)="onNavigate(ButtonMenu)" mat-flat-button buttonStyleType="flat"
+    color="accent" [matMenuTriggerFor]="ButtonMenu.submenus.length ? settingsMenu : null" [text]="ButtonMenu.nome"
+    [icon]="ButtonMenu.icone" [iconEnd]="ButtonMenu.submenus.length ? 'seta-baixo' : ''">
+</app-custom-button>
+
+<mat-menu #settingsMenu>
+    <menu *ngFor="let item of ButtonMenu.submenus" (click)="onNavigate(ButtonMenu, item)" mat-menu-item><mat-icon
+            [svgIcon]="item.icone"></mat-icon> {{ item.nome }} </menu>
+</mat-menu>
