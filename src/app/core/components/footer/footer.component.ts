@@ -31,7 +31,7 @@ export class FooterComponent implements OnInit {
   }
 
   openPrivacyPolicy() {
-    window.open('https://www.unip.br/universidade/politica-privacidade.aspx');
+    window.open('https://www.teste.com.br');
   }
 
 }
