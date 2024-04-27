@@ -9,18 +9,14 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 
-     
 @include mat.core();
 
 $primary-palette: mat.define-palette($primary-color-palette);
 $accent-palette: mat.define-palette($accent-color-palette);
 
-$theme: mat.define-light-theme((
-  color: (
-    primary: $primary-palette,
-    accent: $accent-palette,
-  )
-));
+$theme: mat.define-light-theme((color: (primary: $primary-palette,
+        accent: $accent-palette,
+      )));
 
 body {
   --primary-color: #075EBD;
@@ -28,7 +24,7 @@ body {
   --primary-darker-color: #0442a6;
   --accent-color: #07366A;
   --accent-darker-color: #04224d;
-}   
+}
 
 // Theme Init
 @include mat.all-component-themes($theme);
