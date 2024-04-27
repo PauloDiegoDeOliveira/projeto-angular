@@ -29,8 +29,6 @@ const MY_DATE_FORMAT = {
   ],
   exports: [
     CustomButtonComponent,
-    MatButtonModule,
-    MatProgressSpinnerModule,
     MatIconModule
   ],
 })
