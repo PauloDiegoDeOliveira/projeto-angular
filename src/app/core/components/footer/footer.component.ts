@@ -1,13 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
   public display!: boolean;
@@ -34,7 +31,7 @@ export class FooterComponent implements OnInit {
   }
 
   openPrivacyPolicy() {
-    window.open('https://www.teste.com.br');
+    window.open('https://www.unip.br/universidade/politica-privacidade.aspx');
   }
 
 }
