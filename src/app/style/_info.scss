@@ -1,0 +1,55 @@
+@import './grid';
+@import './common.scss';
+@import './variables.scss';
+
+
+.info{
+
+    overflow: hidden;
+    padding-bottom: 16px;
+    
+
+    table{
+        background-color: #fff;
+        padding: 8px;
+    }
+   
+
+
+        h3{
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        tr{
+            @include grid();
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e4e4e4;
+
+            &:first{
+                border-bottom: none;
+            }
+            
+           
+            td{
+                margin-bottom: 16px;
+            }
+        }
+
+        .row-buttons{
+            display: flex;
+            justify-content: flex-end;
+            border: none;
+        }
+
+        hr{
+            opacity: .4;
+        }
+
+
+}
+
+.divider {
+    margin-bottom: 10px;
+    border-top: 1px solid #e4e4e4;
+}
