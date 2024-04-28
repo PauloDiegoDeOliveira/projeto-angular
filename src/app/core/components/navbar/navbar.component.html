@@ -1,6 +1,6 @@
 <mat-toolbar class="c-navbar" color="accent">
     <app-mini-fab *ngIf="backBtnRoutes()" class="return" icon="seta-esquerda" (clickButton)="return()"></app-mini-fab>
-    <img class="c-navbar__logo" src="./assets/imgs/logo.svg" routerLink="/inicio" draggable="false">
+    <img class="c-navbar__logo" src="./assets/imgs/logo-teste.svg" routerLink="/inicio" draggable="false">
 
     <app-menu-button class="c-navbar__button hidetablet" *ngFor="let item of Menus"
         [ButtonMenu]="item"></app-menu-button>
